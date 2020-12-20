@@ -9,13 +9,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBOutlet var nameLabel: UILabel!
+   
+    @IBAction func input(segue: UIStoryboardSegue) {
+        let input = segue.source as? InputViewController
+        nameLabel.text =  input?.prefectuers
     }
     
     @IBAction func exit(segue:UIStoryboardSegue) {
-        
     }
 }
 

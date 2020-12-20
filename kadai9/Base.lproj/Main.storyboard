@@ -42,6 +42,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="LgK-sZ-lMV" id="xaw-nu-y5j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -58,22 +61,36 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UOS-Nj-1gh">
                                 <rect key="frame" x="184" y="136" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                 <state key="normal" title="東京都"/>
+                                <connections>
+                                    <action selector="tokyoAction:" destination="v7z-ZF-wo3" eventType="touchUpInside" id="WFb-Ce-mc1"/>
+                                    <segue destination="xE9-wH-Fq8" kind="unwind" identifier="segue" unwindAction="inputWithSegue:" id="mJc-ZF-1vt"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2e-KC-Hwf">
                                 <rect key="frame" x="176" y="174" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="神奈川県"/>
+                                <connections>
+                                    <action selector="kanagawaAction:" destination="v7z-ZF-wo3" eventType="touchUpInside" id="kAY-tD-bTi"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yjS-Tg-yiJ">
                                 <rect key="frame" x="184" y="212" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="埼玉県"/>
+                                <connections>
+                                    <action selector="saitamaAction:" destination="v7z-ZF-wo3" eventType="touchUpInside" id="rKb-c6-Xrx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QsE-bK-EXQ">
                                 <rect key="frame" x="184" y="250" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="千葉県"/>
+                                <connections>
+                                    <action selector="chibaAction:" destination="v7z-ZF-wo3" eventType="touchUpInside" id="bjY-mM-G0U"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cdx-03-3Cp"/>
@@ -86,6 +103,12 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="chibaButton" destination="QsE-bK-EXQ" id="mso-OK-4z4"/>
+                        <outlet property="kanagwaButton" destination="b2e-KC-Hwf" id="ohy-OJ-lMp"/>
+                        <outlet property="saitamaButton" destination="yjS-Tg-yiJ" id="Xfu-Bv-HmA"/>
+                        <outlet property="tokyoButton" destination="UOS-Nj-1gh" id="eja-xb-Nhw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zbV-58-I7b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="xE9-wH-Fq8" userLabel="Exit" sceneMemberID="exit"/>
