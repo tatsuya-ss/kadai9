@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  InputViewController.swift
 //  kadai9
 //
 //  Created by 坂本龍哉 on 2020/12/20.
@@ -7,15 +7,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class InputViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
-    
-    @IBAction func exit(segue:UIStoryboardSegue) {
-        
-    }
-}
 
+ 
+    
+}

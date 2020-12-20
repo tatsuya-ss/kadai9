@@ -35,8 +35,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="入力"/>
                                 <connections>
-                                    <action selector="inputButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ej6-rT-Wgq"/>
-                                    <segue destination="yRq-ed-jV2" kind="presentation" identifier="segue" id="bKb-sG-KHq"/>
+                                    <segue destination="yRq-ed-jV2" kind="presentation" id="gZ5-al-m8a"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -48,10 +47,10 @@
             </objects>
             <point key="canvasLocation" x="-197" y="107"/>
         </scene>
-        <!--View Controller-->
+        <!--Input View Controller-->
         <scene sceneID="iF6-3K-rMm">
             <objects>
-                <viewController id="v7z-ZF-wo3" sceneMemberID="viewController">
+                <viewController id="v7z-ZF-wo3" customClass="InputViewController" customModule="kadai9" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0t8-pL-q9e">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,16 +80,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="2vR-1d-E9p">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="86q-Cj-snq">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="I5D-XZ-Wp5">
-                                <rect key="frame" x="20" y="13" width="92" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Cancel"/>
-                            </button>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="ixJ-iR-XoO">
+                            <connections>
+                                <segue destination="xE9-wH-Fq8" kind="unwind" unwindAction="exitWithSegue:" id="Xd9-Uv-Zhs"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zbV-58-I7b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="xE9-wH-Fq8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1573.913043478261" y="105.80357142857143"/>
         </scene>
