@@ -7,28 +7,32 @@
 
 import UIKit
 
-class InputViewController: UIViewController {
-    @IBOutlet var tokyoButton: UIButton!
-    @IBOutlet var kanagwaButton: UIButton!
-    @IBOutlet var saitamaButton: UIButton!
-    @IBOutlet var chibaButton: UIButton!
+final class InputViewController: UIViewController {
+    @IBOutlet private var tokyoButton: UIButton!
+    @IBOutlet private var kanagwaButton: UIButton!
+    @IBOutlet private var saitamaButton: UIButton!
+    @IBOutlet private var chibaButton: UIButton!
     
-    var prefectuers = ""
+    private(set) var prefectuer = ""
     
     @IBAction func tokyoAction(_ sender: Any) {
-        prefectuers = tokyoButton.currentTitle!
-        performSegue(withIdentifier: "segue", sender: sender)
+        performUnwindSegue(prefecture: "東京", sender: sender)
     }
+    
     @IBAction func kanagawaAction(_ sender: Any) {
-        prefectuers = kanagwaButton.currentTitle!
-        performSegue(withIdentifier: "segue", sender: sender)
+        performUnwindSegue(prefecture: "神奈川", sender: sender)
     }
+    
     @IBAction func saitamaAction(_ sender: Any) {
-        prefectuers = saitamaButton.currentTitle!
-        performSegue(withIdentifier: "segue", sender: sender)
+        performUnwindSegue(prefecture: "埼玉", sender: sender)
     }
+    
     @IBAction func chibaAction(_ sender: Any) {
-        prefectuers = chibaButton.currentTitle!
+        performUnwindSegue(prefecture: "千葉", sender: sender)
+    }
+    
+    private func performUnwindSegue(prefecture: String, sender: Any) {
+        self.prefectuer = prefecture
         performSegue(withIdentifier: "segue", sender: sender)
     }
 }
